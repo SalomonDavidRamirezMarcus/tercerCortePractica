@@ -10,7 +10,7 @@ public class personage : MonoBehaviour
     private Rigidbody rb;
 
 
-    //public Animator anima;
+    public Animator anima;
 
     // Start is called before the first frame update
     void Start()
@@ -32,17 +32,17 @@ public class personage : MonoBehaviour
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
         rb.MoveRotation(rb.rotation * rotation);
 
-        //if (verticalInput > 0 || verticalInput < 0)
-        //{
-        //    anima.SetFloat("walk", Mathf.Abs(verticalInput));
+        if (verticalInput > 0 || verticalInput < 0)
+        {
+            anima.SetFloat("walk", Mathf.Abs(verticalInput));
 
-        //}
-        //else
-        //{
-        //    anima.SetFloat("walk", 0);
-        //}
+        }
+        else
+        {
+            anima.SetFloat("walk", 0);
+        }
 
-        
+
     }
 
 
